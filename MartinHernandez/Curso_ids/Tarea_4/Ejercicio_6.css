@@ -1,0 +1,69 @@
+
+body, html{
+margin: 0px;
+padding:  0px;
+background-color: blue;
+
+}
+
+
+
+.titulo{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    
+}
+.logo{
+
+    text-decoration: none;
+}
+.motor{
+
+
+    
+    background-color: aliceblue;
+    border-radius: 1rem;
+    text-align: center;
+    
+}
+
+.busqueda{
+
+
+    display: grid;
+    grid-template-columns: 1fr 13fr 1fr 1fr;
+}
+
+
+.colors{
+
+    background-color: aliceblue;
+   
+}
+
+
+
+.boton{
+
+border-radius: .2rem;
+background-color: white;
+
+}
+
+.navegador{
+
+display: flex;
+justify-content: flex-end;
+
+
+}
+
+.links{
+
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0px;
+}

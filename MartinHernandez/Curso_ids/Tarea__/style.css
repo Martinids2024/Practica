@@ -1,0 +1,67 @@
+
+*{
+
+background-color: aqua;
+}
+
+h1{
+
+
+text-align: center; 
+color: brown;   
+}
+
+h1, p {
+
+    font-size: 2rem;
+    
+
+}
+
+
+h1 ~ p {
+
+
+    font-size: 2rem;
+
+}
+
+
+#nombre{
+
+    color: blue;
+    font-size: 2rem;
+    text-align: center;
+}
+
+div{
+
+    
+    margin: 10px 5px;
+    padding: 10px;
+    border: 10px blue solid;
+}
+
+.campos{
+
+    display: block;
+
+
+}
+
+article p {
+
+color: black;
+
+}
+
+article > p {
+
+    font-size: 3rem;
+}
+
+input[type]{
+
+    background-color: blueviolet;
+
+}

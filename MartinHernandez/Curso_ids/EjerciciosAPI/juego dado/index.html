@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego del Dado</title>
+</head>
+<body>
+  
+    <section class="contenedor" id="contenedor">
+    <form >
+        <div class="conten1">
+            <h1>Binvenido al juego del Dado</h1>
+            <img src="Dado (GIF).gif" class="imagen">
+            <h2>
+                El valor del Dado es:
+            </h2>
+            <div class="mostrarNunmero">
+            <input type="text" class="texto"  id="numeroAle" placeholder="numero aleatorio" value="">
+            </div>
+            <div class="button">
+            <input type="button"  id="lanzarModal" class="boton" value="Girar Dado">
+        </div>
+      
+    </div>
+
+     </form>
+    </section> 
+
+<!-----------------------------------diceño del modall------------------------------------------------>
+<!-- class="contenedorModal" -->
+  <dialog  id="contenedorModal" class="estilo">
+ 
+<div class="modal">
+
+    <legend> !!Oops suerte para la proxima!! </legend>
+    <img src="exclamacion.avif" class="imagen2">
+
+    <input type="text" class="texto2"  id="resul" placeholder="numero aleatorio" value="">
+        <legend id="interntar"> es muy bajo!!</legend>
+
+   
+    <div class="button2">
+        
+        <input type="button"  id= "ocultar" class="boton2" value="       Salir        ">
+    </div>
+
+</div>
+ </dialog>
+
+<script src= "dato.js"></script>
+</body>
+</html>

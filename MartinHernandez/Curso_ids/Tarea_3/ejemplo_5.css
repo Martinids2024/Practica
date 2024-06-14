@@ -1,0 +1,57 @@
+
+.contenedor{
+
+    display: grid;
+    grid-template-columns:3fr 8fr;
+    
+    
+    
+}
+
+
+.navegador{
+background-color: gray;
+height: 150px;
+color: black;
+border-radius:1rem;
+}
+.articulos{
+
+    display: block;
+    
+  
+}
+.articulo_1{
+
+    height: 250px;
+    width: 380px;
+    background-color: rgb(83, 107, 132);
+    border-radius: 1rem;
+
+    
+}
+.articulo_2{
+
+    height: 200px;
+    width: 380px;
+    background-color: rgb(161, 90, 105);
+    border-radius: 1rem;
+    margin-top: .5rem;
+
+
+}
+
+.contenido{
+
+background-color: rgb(195, 155, 23);
+border-radius:1rem;
+margin-top: .5rem;
+
+
+}
+ .pie_de_pagina{
+
+    background-color: rgb(195, 111, 213);
+    height: 150px;
+    border-radius: 1rem;
+ }

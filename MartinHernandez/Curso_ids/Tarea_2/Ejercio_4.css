@@ -1,0 +1,82 @@
+
+
+.contenedor{
+
+    display: flex;
+}
+
+.box-1{
+
+background-color:#11041d;
+height: 400px;
+width: 1000px;
+
+}
+
+h1{
+
+    color: aliceblue;
+    font-size: 2.5rem;
+}
+h2{
+
+
+    font-size: 2rem;
+    color: aliceblue;
+}
+p{
+
+    color: aliceblue;
+    font-size: 1rem;
+}
+.diferente{
+
+    text-align: center;
+    font-size: 2.5rem;
+     color:blueviolet;
+}
+.numeros{
+
+
+    display: flex;
+    gap: 7rem;
+    margin-left: 80px;
+
+
+
+}
+.parrafo-inicio{
+
+    margin-left: 100px;
+    line-height: 1.5;
+    width: 400px;
+    
+}
+
+.imagen{
+
+    
+    background-color: white;
+
+}
+
+.letras{
+
+    font-size: 10px;
+}
+.dato {
+
+margin-left: 120px;
+width: 400px;
+
+     
+   
+}
+∫
+.box-2{
+
+
+    background-color:mediumorchid;
+    height: 400px;
+    width: 1000px;
+}

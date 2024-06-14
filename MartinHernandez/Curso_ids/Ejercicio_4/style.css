@@ -1,0 +1,21 @@
+
+body{
+
+    display: block;
+}
+h{
+
+    font-size: 3rem;
+    color: black;
+
+}
+
+.contenido{
+
+    background-color: brown;
+    border-radius: 50px;
+    min-height: 70px;
+    max-height: 30px;
+    max-width: 80px;
+    min-width: 15px;
+}

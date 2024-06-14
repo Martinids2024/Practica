@@ -1,0 +1,43 @@
+
+.contenedor{
+
+display:grid;
+grid-template-columns: repeat(4, 8rem);
+
+
+}
+
+.box_1{
+
+ background-color: aqua;
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+
+}
+.box_2{
+
+    background-color: aqua;
+    width: 100px;
+     height: 100px;
+    border-radius: 50%;
+
+}
+
+.box_3{
+
+    background-color: aqua;
+    width: 100px;
+ height: 100px;
+ border-radius: 50%;
+
+   }
+   .box_4{
+   
+       background-color: aqua;
+       width: 100px;
+ height: 100px;
+ border-radius: 50%;
+
+   }
+   

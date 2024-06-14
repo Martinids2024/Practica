@@ -1,0 +1,86 @@
+.contenedor{
+
+    display: flex;
+    border: 2px black solid;
+    
+
+}
+
+.box1{
+
+
+
+}
+
+.box2{
+
+    background-color:white;
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+
+}
+.imagen{
+
+
+    height: 500px;
+    width: 600px;
+}
+
+h1{
+
+
+    text-align: center;
+}
+
+.texto{
+
+    height: 167px;
+    width: 447px;
+    padding-inline: 40px;
+}
+p{
+
+    text-align: center;
+}
+
+.texto2{
+
+    
+    display: flex;
+    
+}
+
+.nombre{
+
+
+gap: 5rem;
+height: 167px;
+width: 800px;
+
+}
+
+.textofinal{
+
+padding-left: 30px;
+
+}
+
+.imagen1{
+
+   
+width: 80px;
+
+}
+.imagen2{
+
+    padding-left: 50px;
+
+}
+
+.user{
+
+text-align: end;
+height: 167px;
+width: 800px;
+}

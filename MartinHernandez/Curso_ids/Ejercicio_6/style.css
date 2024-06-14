@@ -1,0 +1,35 @@
+
+.contenedor{
+
+    background-color: blueviolet;
+    display:flex;
+    gap: 2rem;
+    height: 200px;
+    width: 500px;
+    justify-content: space-between;
+    align-items: first baseline;
+
+
+}
+
+.box1{
+
+ background-color: aqua;
+ height: 200px;
+ width: 200px;
+
+}
+
+.box2{
+    
+    background-color: aqua;
+    height: 200px;
+    width: 200px;  
+}
+
+.box3{
+    
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+}

@@ -1,0 +1,98 @@
+.contenedor{
+
+display:flex;
+flex-direction: column-reverse;
+justify-content: flex-end;
+flex-wrap: nowrap;
+background-color:#141430;
+height: 663px;
+width: 400px;
+border-radius: 1rem;
+}
+
+.imagen{
+
+   position: relative;
+   left: calc(7% - 5%);
+   height: 345px;
+   width: 339px;
+   margin: 20px;
+   border-radius: .3rem;
+}
+
+h1{
+
+text-align: justify;
+color: white;
+font-family: "Maven Pro", sans-serif;
+
+}
+
+.contenedor-box3{
+
+    display: flex;
+    gap: 1rem;
+    padding-left: 2rem;
+    font-family: "Maven Pro", sans-serif;
+    margin: 1px;
+    border-bottom: 2px rgb(186, 186, 186) solid ;
+}
+
+.texto{
+
+    display: block;
+    padding-left: 3rem;
+}
+
+.texto2{
+
+padding-left: 3rem;
+color: rgb(205, 190, 190);
+font-size: 1.3rem;
+font-weight: lighter;
+font-family: "Maven Pro", sans-serif;
+
+}
+
+h3{
+
+color:rgb(81 200 133);
+padding: 19px;
+margin: 7px;
+
+}
+.tres{
+    padding: 27px;
+    color: rgb(205, 190, 190);
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: "Maven Pro", sans-serif;  
+}
+
+.contenedor4{
+
+padding-left: 96px;
+margin-top: 16px;
+
+
+}
+
+.ultimo{
+
+    color: white;
+    font-weight: lighter;
+}
+.final{
+
+
+   margin: 18px;
+   padding-left: 20px;
+}
+
+.diferente{
+    
+
+     color: white;
+     font-size: 1rem;
+     margin: 20px;
+}

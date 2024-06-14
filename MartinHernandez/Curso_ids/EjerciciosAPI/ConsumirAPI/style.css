@@ -1,0 +1,31 @@
+
+
+#app{
+
+background-color:coral;
+display: block;
+height: 300px;
+width: 300px;
+
+
+}
+
+
+.title{
+
+color: rgb(0, 0, 0);
+background-color: rgb(193, 30, 30);
+text-align: center;
+}
+
+img{
+
+
+ padding-left: 5rem;
+}
+
+p{
+    color: rgb(0, 0, 0);
+;
+text-align: center;
+}

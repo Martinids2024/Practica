@@ -1,0 +1,19 @@
+.contenedor{
+
+
+background-color: aquamarine;
+
+
+
+}
+
+.navegador{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+
+    text-decoration: none;
+}
