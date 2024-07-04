@@ -1,5 +1,6 @@
 import { LitElement, css, html } from "lit";
 import "./Agregar.js";
+import Agregar from "./Agregar.js";
 
 export default class Crud extends LitElement{
     static  get properties() {
@@ -43,7 +44,9 @@ export default class Crud extends LitElement{
             margin-top:1rem;
             display:flex;
         }
+
         div[close]{
+
             display:none;
         }
         agregar-app[open]{
@@ -53,9 +56,8 @@ export default class Crud extends LitElement{
     `;
    
     render(){
-        console.log("hola desde crud");
         return html`
-            <div class="padre" ?close= ${this.hidden}>
+            <div id="padre" class="padre" ?close= ${this.hidden}>
                 <div class="navegador"  >
                     <h1>CRUD</h1>
                 </div>
@@ -77,8 +79,18 @@ export default class Crud extends LitElement{
         `;
     }
     Agregar(){
-        
             this.hidden = true;
-      
-    }   
+    }
+
+    updated(){
+        this.shadowRoot.querySelector('agregar-app').addEventListener('change-hidden', 
+            (event) => {
+                //hidden = true
+                console.log(event);
+                this.hidden = event.detail.val;
+                //hidden = false
+            }
+        )
+    }
+
 }

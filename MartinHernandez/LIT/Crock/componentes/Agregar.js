@@ -1,5 +1,6 @@
 import { LitElement, html, css} from "lit";
 export default class Agregar extends LitElement{
+
     static get properties() {
         return {
             hidden:{type:Boolean}
@@ -7,7 +8,6 @@ export default class Agregar extends LitElement{
     }
     constructor(){
         super();
-        this.hidden= false;
     }
     static styles=css`
         :host{
@@ -15,7 +15,7 @@ export default class Agregar extends LitElement{
         }
         .padre{
             display: flex;
-;            width:400px;
+          width:400px;
             height: 500px; 
             background-color:grey;
             margin: 0 auto 0;
@@ -56,14 +56,10 @@ export default class Agregar extends LitElement{
         div[close]{
                 display:none;
             }
-            crud-app[open]{
-                display:block;
-            }
-        
     `;
     render(){
         return html`
-            <div class="padre" ?close=${this.hidden}>
+            <div class="padre">
                 <div class="hijo">
                     <h1>Agregar</h1>
                     <label>
@@ -78,16 +74,18 @@ export default class Agregar extends LitElement{
                         Edad:
                     </label>
                     <input type="number" name="edad" id="años">
-                    <button id="btnAgregar" @click=${this.Cerrar}>Agregar</button> 
+                    <button id="btnAgregar" @click=${this.updateHidden}>Agregar</button>
                 </div>
             </div>
-            <crud-app ?open=${this.hidden}></crud-app>
+           
         `;
     }
-    Cerrar(){
-        this.hidden= true;
-      
+
+    updateHidden(){
+                                          // nombre custom event     detail: valores   
+        this.dispatchEvent(new CustomEvent('change-hidden', {detail: {val: false}}));
     }
+
 }
 
 customElements.define('agregar-app', Agregar);
