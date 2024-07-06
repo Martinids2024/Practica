@@ -3,11 +3,13 @@ export default class Agregar extends LitElement{
 
     static get properties() {
         return {
-            hidden:{type:Boolean}
+            hidden:{type:Boolean},
+            arreglo:{type:Array}
         }
     }
     constructor(){
         super();
+        this.arreglo=[];
     }
     static styles=css`
         :host{
@@ -84,8 +86,22 @@ export default class Agregar extends LitElement{
     updateHidden(){
                                           // nombre custom event     detail: valores   
         this.dispatchEvent(new CustomEvent('change-hidden', {detail: {val: false}}));
+        const nombre= this.shadowRoot.getElementById("nombre").value;
+
+        console.log(nombre);
+        const apellido= this.shadowRoot.getElementById("apellido").value;
+        console.log(apellido);
+        const años= this.shadowRoot.getElementById("años").value;
+        console.log(años);
+        //Mandar llamar la funcion para limpiar los campos
+         this.Clear();
+        
     }
+    Clear(){
+        this.shadowRoot.getElementById("nombre").value = "";
+        this.shadowRoot.getElementById("apellido").value = "";
+        this.shadowRoot.getElementById("años").value = "";
 
+    }
 }
-
 customElements.define('agregar-app', Agregar);
