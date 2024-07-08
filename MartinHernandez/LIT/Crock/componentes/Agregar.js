@@ -87,7 +87,6 @@ export default class Agregar extends LitElement{
                                           // nombre custom event     detail: valores   
         this.dispatchEvent(new CustomEvent('change-hidden', {detail: {val: false}}));
         const nombre= this.shadowRoot.getElementById("nombre").value;
-
         console.log(nombre);
         const apellido= this.shadowRoot.getElementById("apellido").value;
         console.log(apellido);
@@ -95,6 +94,7 @@ export default class Agregar extends LitElement{
         console.log(años);
         //Mandar llamar la funcion para limpiar los campos
          this.Clear();
+         arreglo
         
     }
     Clear(){
