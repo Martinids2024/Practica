@@ -94,7 +94,11 @@ export default class Agregar extends LitElement{
         console.log(años);
         //Mandar llamar la funcion para limpiar los campos
          this.Clear();
-         arreglo
+         //meterla dentro de un arreglo
+         this.arreglo.push({name: nombre, apellido: apellido, edad: años });
+         console.log(this.arreglo);
+         const jsonArreglo = JSON.stringify(this.arreglo);
+         console.log(jsonArreglo);
         
     }
     Clear(){
