@@ -1,6 +1,6 @@
 import { LitElement, css, html } from "lit";
 import "./Agregar.js";
-import Agregar from "./Agregar.js";
+
 
 export default class Crud extends LitElement{
     static  get properties() {
@@ -56,33 +56,48 @@ export default class Crud extends LitElement{
     `;
    
     render(){
+      
         return html`
             <div id="padre" class="padre" ?close= ${this.hidden}>
-                <div class="navegador"  >
+                <div class="navegador">
                     <h1>CRUD</h1>
                 </div>
                 <div class="agregar">
                     <button class="btnA" @click=${this.Agregar}>Agregar</button>
                 </div>
-                <table class="tbl">
+                <table class="tbl" id="tabla">
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Edad</th>
-                    </tr>
-                    <tr>
+                    
+                       
                     </tr>
                 </table>
             </div>
             <agregar-app ?open=${this.hidden}></agregar-app>
-
+            
         `;
+        
     }
+    
     Agregar(){
-            this.hidden = true;
+            this.hidden = true;   
     }
 
     updated(){
+        const tab = this.shadowRoot.getElementById("tabla");
+        const array = JSON.parse(localStorage.getItem('arreglo'));
+        array.forEach(item => {
+        const recorre = tab.insertRow();
+        recorre.innerHTML =`
+            <td>${item.id}</td>
+            <td>${item.name}</td> 
+            <td>${item.apellido}</td>
+            <td>${item.edad}</td><button  @click="Eliminar">Eliminar</button><button>Editar</button>
+    `;
+}) 
+      
         this.shadowRoot.querySelector('agregar-app').addEventListener('change-hidden', 
             (event) => {
                 //hidden = true

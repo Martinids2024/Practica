@@ -18,7 +18,7 @@ export default class Agregar extends LitElement{
         .padre{
             display: flex;
           width:400px;
-            height: 500px; 
+            height: 550px; 
             background-color:grey;
             margin: 0 auto 0;
             
@@ -44,8 +44,13 @@ export default class Agregar extends LitElement{
             font-size: 1.5rem;
            
         }
+        #guardar{
+            margin-top: 1rem;
+            width:150px;
+            height: 40px;
+        }
         #btnAgregar{
-            margin-top: 2rem;
+            margin-top: 1rem;
             width:150px;
             height: 40px;
         }
@@ -76,30 +81,32 @@ export default class Agregar extends LitElement{
                         Edad:
                     </label>
                     <input type="number" name="edad" id="años">
-                    <button id="btnAgregar" @click=${this.updateHidden}>Agregar</button>
+                    <button id="guardar"  @click="${this.guardar}">Guardar</button>
+                    <button id="btnAgregar" @click=${this.updateHidden}>Cerrar</button>
                 </div>
             </div>
            
         `;
+
     }
 
     updateHidden(){
                                           // nombre custom event     detail: valores   
         this.dispatchEvent(new CustomEvent('change-hidden', {detail: {val: false}}));
+        //Mandar llamar la funcion para limpiar los campos
+         this.Clear();
+    }
+    guardar(){
         const nombre= this.shadowRoot.getElementById("nombre").value;
         console.log(nombre);
         const apellido= this.shadowRoot.getElementById("apellido").value;
         console.log(apellido);
         const años= this.shadowRoot.getElementById("años").value;
         console.log(años);
-        //Mandar llamar la funcion para limpiar los campos
-         this.Clear();
-         //meterla dentro de un arreglo
-         this.arreglo.push({name: nombre, apellido: apellido, edad: años });
-         console.log(this.arreglo);
-         const jsonArreglo = JSON.stringify(this.arreglo);
-         console.log(jsonArreglo);
-        
+        //meterla dentro de un arreglo
+        this.arreglo.push({ id: this.arreglo.length + 1, name: nombre, apellido: apellido, edad: años });
+        this.arreglo.value = ' ';
+         localStorage.setItem('arreglo', JSON.stringify(this.arreglo));
     }
     Clear(){
         this.shadowRoot.getElementById("nombre").value = "";
