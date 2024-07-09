@@ -97,6 +97,7 @@ export default class Agregar extends LitElement{
          this.Clear();
     }
     guardar(){
+        this.arreglo = [];
         const nombre= this.shadowRoot.getElementById("nombre").value;
         console.log(nombre);
         const apellido= this.shadowRoot.getElementById("apellido").value;
@@ -105,8 +106,9 @@ export default class Agregar extends LitElement{
         console.log(años);
         //meterla dentro de un arreglo
         this.arreglo.push({ id: this.arreglo.length + 1, name: nombre, apellido: apellido, edad: años });
+        console.log(this.arreglo);
         this.arreglo.value = ' ';
-         localStorage.setItem('arreglo', JSON.stringify(this.arreglo));
+        localStorage.setItem('arreglo', JSON.stringify(this.arreglo));
     }
     Clear(){
         this.shadowRoot.getElementById("nombre").value = "";

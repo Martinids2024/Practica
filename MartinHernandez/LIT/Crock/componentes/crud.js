@@ -88,20 +88,23 @@ export default class Crud extends LitElement{
     updated(){
         const tab = this.shadowRoot.getElementById("tabla");
         const array = JSON.parse(localStorage.getItem('arreglo'));
-        array.forEach(item => {
-        const recorre = tab.insertRow();
-        recorre.innerHTML =`
-            <td>${item.id}</td>
-            <td>${item.name}</td> 
-            <td>${item.apellido}</td>
-            <td>${item.edad}</td><button  @click="Eliminar">Eliminar</button><button>Editar</button>
-    `;
-}) 
-      
+        localStorage.removeItem('arreglo');
+        if (array != null) {
+            array.forEach(item => {
+                const recorre = tab.insertRow();
+                recorre.innerHTML =`
+                    <td>${item.id}</td>
+                    <td>${item.name}</td> 
+                    <td>${item.apellido}</td>
+                    <td>${item.edad}</td><button  @click="Eliminar">Eliminar</button><button>Editar</button>
+                    `;
+               
+            }) 
+        }
+       
         this.shadowRoot.querySelector('agregar-app').addEventListener('change-hidden', 
             (event) => {
                 //hidden = true
-                console.log(event);
                 this.hidden = event.detail.val;
                 //hidden = false
             }
